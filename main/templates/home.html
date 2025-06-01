@@ -1,0 +1,9 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <h2>Home page</h2>
+    <a href="{% url "blog_template" %}">blog_template</a>
+    <br>
+    <a href="{% url "comment_section" %}">comment_section</a>
+{% endblock content %}
+
