@@ -1,12 +1,14 @@
 from django.shortcuts import render
-
+from .models import Comment,post
+from django.utils.timezone import now
 # Create your views here.
 
 
 #home_page view
 
 def home_page(request):
-    return render(request,'home.html')
+    blog=post.objects.all()
+    return render(request,'home.html',{'data':blog ,'now':now()})
 
 def blog_template(request):
     return render(request,'blog_template.html')
